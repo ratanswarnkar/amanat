@@ -1,0 +1,46 @@
+[dotenv@17.3.1] injecting env (13) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[2026-04-07T05:29:45.361Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[2026-04-07T05:29:45.412Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 18 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[2026-04-07T05:29:46.165Z] [INFO] Server running host=0.0.0.0 port=5077
+AUTH LOGIN HIT
+🔐 DEV OTP: 191051
+{ mobile: '9876543303', otp: '191051', message: 'DEV MODE OTP' }
+[2026-04-07T05:29:50.627Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3303
+AUTH LOGIN HIT
+LOGIN USER: 3f3a5dad-50d2-4827-b224-985df0dee974
+ROLES: { owner: true, nominee: false, caretaker: false }
+AUTH LOGIN HIT
+LOGIN USER: 3f3a5dad-50d2-4827-b224-985df0dee974
+ROLES: { owner: true, nominee: false, caretaker: false }
+🔐 DEV OTP: 212518
+{ mobile: '9876543304', otp: '212518', message: 'DEV MODE OTP' }
+[2026-04-07T05:29:51.401Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3304
+[2026-04-07T05:29:51.527Z] [INFO] Nominee approved after OTP verification requestId=256d32ab-a07d-4215-9d52-479cd03ae40b nomineeId=068309b6-4390-40be-8545-fa4bd35db444 verificationId=8858e73e-91a5-4682-a719-26304b04d43e userId=3f3a5dad-50d2-4827-b224-985df0dee974
+NOMINEE LOGIN HIT
+🔐 DEV OTP: 686345
+{ mobile: '9876543304', otp: '686345', message: 'DEV MODE OTP' }
+[2026-04-07T05:29:51.640Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3304
+NOMINEE LOGIN HIT
+🔐 DEV OTP: 533957
+{ mobile: '9876543304', otp: '533957', message: 'DEV MODE OTP' }
+[2026-04-07T05:29:51.796Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3304
+[Emergency Action] {
+  requestId: '11079b31-2215-4779-b850-65eda27f9969',
+  action: 'trigger',
+  userId: '3f3a5dad-50d2-4827-b224-985df0dee974',
+  triggerId: '50c56aa5-24af-483c-9ccb-c796ae489f8e',
+  triggerReason: 'qa emergency drill',
+  verifiedNomineeCount: 1,
+  notifiedCount: 1,
+  notificationErrorCount: 0,
+  userEmergencyFlagUpdated: true,
+  at: '2026-04-07T05:29:51.796Z'
+}

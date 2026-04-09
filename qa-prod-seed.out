@@ -1,0 +1,12 @@
+[dotenv@17.3.1] injecting env (12) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[2026-04-07T06:06:18.071Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[2026-04-07T06:06:18.128Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 18 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[2026-04-07T06:06:18.882Z] [INFO] Server running host=0.0.0.0 port=5083

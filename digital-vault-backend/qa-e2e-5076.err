@@ -1,0 +1,1 @@
+[Auth Failure] Revoked or expired session { method: 'GET', path: '/auth/me' }

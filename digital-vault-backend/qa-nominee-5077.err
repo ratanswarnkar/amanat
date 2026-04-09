@@ -1,0 +1,4 @@
+[Auth Failure] Invalid bearer format { method: 'GET', path: '/api/nominee-access/status' }
+[Auth Failure] Invalid bearer format { method: 'GET', path: '/api/nominee-access/files' }
+[Auth Failure] Invalid bearer format { method: 'GET', path: '/api/vault/files' }
+[Auth Failure] Invalid bearer format { method: 'POST', path: '/api/vault/create' }

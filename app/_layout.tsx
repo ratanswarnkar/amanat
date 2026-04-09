@@ -1,24 +1,30 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import Toast from 'react-native-toast-message';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import ScreenWrapper from '../components/ui/ScreenWrapper';
+import { toastConfig } from '../components/ui/toastConfig';
+import '../src/config/firebase';
+import { AuthProvider } from '../context/AuthContext';
+import { EmergencyProvider } from '../context/EmergencyContext';
+import { FileProvider } from '../context/FileContext';
+import { NomineeProvider } from '../context/NomineeContext';
+import { colors } from '../theme/colors';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <AuthProvider>
+        <EmergencyProvider>
+          <NomineeProvider>
+            <FileProvider>
+              <ScreenWrapper backgroundColor={colors.background} statusBarStyle="light">
+                <Stack screenOptions={{ headerShown: false }} />
+                <Toast config={toastConfig} />
+              </ScreenWrapper>
+            </FileProvider>
+          </NomineeProvider>
+        </EmergencyProvider>
+      </AuthProvider>
+    </SafeAreaProvider>
   );
 }

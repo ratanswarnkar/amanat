@@ -1,0 +1,46 @@
+[dotenv@17.3.1] injecting env (13) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[2026-04-07T06:14:59.190Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[2026-04-07T06:14:59.251Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 18 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[2026-04-07T06:15:00.013Z] [INFO] Server running host=0.0.0.0 port=5089
+AUTH LOGIN HIT
+🔐 DEV OTP: 794675
+{ mobile: '9876543316', otp: '794675', message: 'DEV MODE OTP' }
+[2026-04-07T06:15:04.335Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3316
+AUTH LOGIN HIT
+LOGIN USER: cffacbda-4a4a-4be1-9878-a99438fa7fa2
+ROLES: { owner: true, nominee: false, caretaker: false }
+AUTH LOGIN HIT
+LOGIN USER: cffacbda-4a4a-4be1-9878-a99438fa7fa2
+ROLES: { owner: true, nominee: false, caretaker: false }
+🔐 DEV OTP: 448202
+{ mobile: '9876543317', otp: '448202', message: 'DEV MODE OTP' }
+[2026-04-07T06:15:04.875Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3317
+[2026-04-07T06:15:04.969Z] [INFO] Nominee approved after OTP verification requestId=8a0dba7c-35a2-4325-ad01-0c4bb31dfc96 nomineeId=310404fa-500f-4bf1-a56e-f10226ca9ee5 verificationId=384a31ad-5cd7-4e4c-90c7-cb9ad57b9a49 userId=cffacbda-4a4a-4be1-9878-a99438fa7fa2
+🔐 DEV OTP: 900137
+{ mobile: '9876543317', otp: '900137', message: 'DEV MODE OTP' }
+[2026-04-07T06:15:05.007Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3317
+[Emergency Action] {
+  requestId: 'd0496490-1747-47de-9da1-35cf51e9b861',
+  action: 'trigger',
+  userId: 'cffacbda-4a4a-4be1-9878-a99438fa7fa2',
+  triggerId: '3200e80c-1d80-40ea-a303-059bef3f8775',
+  triggerReason: 'qa final check',
+  verifiedNomineeCount: 1,
+  notifiedCount: 1,
+  notificationErrorCount: 0,
+  userEmergencyFlagUpdated: true,
+  at: '2026-04-07T06:15:05.008Z'
+}
+NOMINEE LOGIN HIT
+🔐 DEV OTP: 797506
+{ mobile: '9876543317', otp: '797506', message: 'DEV MODE OTP' }
+[2026-04-07T06:15:05.098Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3317
+NOMINEE LOGIN HIT

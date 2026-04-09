@@ -1,0 +1,22 @@
+[dotenv@17.3.1] injecting env (13) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[2026-04-07T06:36:23.196Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[2026-04-07T06:36:23.244Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 18 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[2026-04-07T06:36:23.885Z] [INFO] Server running host=0.0.0.0 port=5094
+AUTH LOGIN HIT
+🔐 DEV OTP: 631480
+{ mobile: '9875543782', otp: '631480', message: 'DEV MODE OTP' }
+[2026-04-07T06:36:29.970Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3782
+AUTH LOGIN HIT
+LOGIN USER: d2de6020-ab1a-4d27-9db4-c52bdf2e7494
+ROLES: { owner: true, nominee: false, caretaker: false }
+AUTH LOGIN HIT
+LOGIN USER: d2de6020-ab1a-4d27-9db4-c52bdf2e7494
+ROLES: { owner: true, nominee: false, caretaker: false }

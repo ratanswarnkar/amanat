@@ -1,0 +1,17 @@
+[dotenv@17.3.1] injecting env (13) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[2026-04-06T20:58:08.736Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[2026-04-06T20:58:08.781Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 16 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[2026-04-06T20:58:09.549Z] [INFO] Server running host=0.0.0.0 port=5067
+AUTH LOGIN HIT
+🔐 DEV OTP: 891860
+{ mobile: '9876543292', otp: '891860', message: 'DEV MODE OTP' }
+[2026-04-06T20:58:13.700Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3292
+AUTH LOGIN HIT

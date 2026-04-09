@@ -1,0 +1,26 @@
+[dotenv@17.3.1] injecting env (13) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[2026-04-07T05:26:45.122Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[2026-04-07T05:26:45.198Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 18 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[2026-04-07T05:26:45.964Z] [INFO] Server running host=0.0.0.0 port=5075
+AUTH LOGIN HIT
+AUTH LOGIN HIT
+🔐 DEV OTP: 342076
+{ mobile: '9876543301', otp: '342076', message: 'DEV MODE OTP' }
+[2026-04-07T05:26:50.393Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3301
+AUTH LOGIN HIT
+AUTH LOGIN HIT
+AUTH LOGIN HIT
+LOGIN USER: da1945c9-b755-43b2-b5b7-490fdaf5ab02
+ROLES: { owner: true, nominee: false, caretaker: false }
+AUTH LOGIN HIT
+AUTH LOGIN HIT
+LOGIN USER: da1945c9-b755-43b2-b5b7-490fdaf5ab02
+ROLES: { owner: true, nominee: false, caretaker: false }

@@ -1,0 +1,12 @@
+[dotenv@17.3.1] injecting env (12) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[2026-04-07T06:11:45.969Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[2026-04-07T06:11:46.026Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 18 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[2026-04-07T06:11:46.775Z] [INFO] Server running host=0.0.0.0 port=5087
