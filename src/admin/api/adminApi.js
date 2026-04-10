@@ -1,7 +1,7 @@
 import { API_URL } from '../../config/env';
 
 const ADMIN_SESSION_KEY = 'AMANAT_ADMIN_SESSION';
-const BASE_URL = API_URL;
+const BASE_URL = "https://amanat-k04h.onrender.com";
 const ADMIN_API_BASE_URL = `${BASE_URL}/api/admin`;
 
 let authToken = '';
