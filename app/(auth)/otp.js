@@ -97,9 +97,14 @@ export default function OtpScreen() {
     }
   };
 
+  const handleBack = async () => {
+    await removeOtpVerifiedToken();
+    router.back();
+  };
+
   return (
     <View style={styles.container}>
-      <AppHeader title="Verify OTP" showBack />
+      <AppHeader title="Verify OTP" showBack onBackPress={handleBack} />
       <KeyboardAvoidingView style={styles.content} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView contentContainerStyle={styles.contentContainer} keyboardShouldPersistTaps="handled">
           <AppCard variant="elevated" style={styles.card}>

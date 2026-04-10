@@ -3,7 +3,6 @@ const {
   sendOtp,
   verifyOtp,
   resendOtp,
-  firebaseExchange,
   setPin,
   login,
   refresh,
@@ -26,8 +25,6 @@ const router = express.Router();
 router.post('/send-otp', authSendOtpLimiter, sendOtp);
 router.post('/verify-otp', authSendOtpLimiter, verifyOtp);
 router.post('/resend-otp', authSendOtpLimiter, resendOtp);
-
-router.post('/firebase-exchange', authExchangeLimiter, firebaseExchange);
 router.post('/set-pin', authPinLimiter, requireOtpVerified, setPin);
 router.post('/login', authLoginLimiter, login);
 router.post('/verify-pin', authPinLimiter, authMiddleware, verifyPin, verifyUserPin);

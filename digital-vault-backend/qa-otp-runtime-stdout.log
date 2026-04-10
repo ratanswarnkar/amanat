@@ -1,0 +1,25 @@
+[dotenv@17.3.1] injecting env (13) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[2026-04-10T13:34:43.054Z] [INFO] Using environment file envPath=C:\Users\Ashish Yadav\OneDrive\Desktop\amanat-app\digital-vault-backend\.env
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[2026-04-10T13:34:43.114Z] [INFO] Starting Digital Vault backend
+[DB] Connecting to PostgreSQL...
+[DB] Database connection established.
+[DB] Checking 19 migration files...
+[DB] Migration check completed.
+[DB] Database is ready.
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[2026-04-10T13:34:43.839Z] [INFO] Server running host=0.0.0.0 port=5073
+AUTH LOGIN HIT
+🔐 DEV OTP: 547332
+{ mobile: '9876543388', otp: '547332', message: 'DEV MODE OTP' }
+[2026-04-10T13:34:49.027Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3388
+AUTH LOGIN HIT
+AUTH LOGIN HIT
+🔐 DEV OTP: 917988
+{ mobile: '9876543388', otp: '917988', message: 'DEV MODE OTP' }
+[2026-04-10T13:35:51.188Z] [INFO] OTP SMS skipped in non-production; OTP logged to console mobileSuffix=3388
+AUTH LOGIN HIT
+AUTH LOGIN HIT
+LOGIN USER: c3797c42-a4ca-4d3c-a04e-65cea3e14e04
+ROLES: { owner: true, nominee: false, caretaker: false }

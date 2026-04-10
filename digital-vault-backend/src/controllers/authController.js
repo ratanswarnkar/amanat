@@ -2,7 +2,6 @@ const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const { v4: uuidv4 } = require('uuid');
-const { initFirebaseAdmin } = require('../config/firebaseAdmin');
 const { sendError, sendOk } = require('../utils/http');
 const { generateOtp, sendOtpSms } = require('../services/otpService');
 const { hasUserSecurityQuestions } = require('../models/securityQuestionModel');
@@ -291,51 +290,6 @@ const verifyOtp = async (req, res) => {
   }
 };
 
-const firebaseExchange = async (req, res) => {
-  try {
-    const { idToken, mobile } = req.body || {};
-
-    if (!idToken || typeof idToken !== 'string') {
-      return sendError(res, 400, 'idToken is required');
-    }
-
-    if (idToken.length > 6000) {
-      return sendError(res, 400, 'idToken is invalid');
-    }
-
-    initFirebaseAdmin();
-    const admin = require('firebase-admin');
-    const decoded = await admin.auth().verifyIdToken(idToken);
-    const tokenPhone = decoded.phone_number || decoded.phoneNumber || '';
-
-    const resolvedMobile = normalizeIndianMobile(mobile || tokenPhone);
-    if (!isValidPhone(resolvedMobile)) {
-      return sendError(res, 400, 'Valid 10-digit phone number is required');
-    }
-
-    const user = await ensureVerifiedUserByMobile(resolvedMobile);
-    if (user.is_blocked) {
-      return sendError(res, 403, 'User account is blocked');
-    }
-    const tokens = await buildTokenPair({ user, req });
-    const roles = await getUserRoles(user.id);
-    logLoginRoles(user.id, roles);
-
-    return sendOk(res, {
-      message: 'Firebase phone verified',
-      token: tokens.token,
-      refreshToken: tokens.refreshToken,
-      otp_verified_token: signOtpVerifiedToken({ mobile: resolvedMobile }),
-      hasPin: Boolean(user.pin_hash),
-      user: await buildClientUser(user),
-      roles,
-    });
-  } catch (error) {
-    const isFirebaseAuthError = String(error?.code || '').startsWith('auth/');
-    return sendError(res, isFirebaseAuthError ? 401 : (error.statusCode || 500), error.message || 'Firebase exchange failed');
-  }
-};
-
 const setPin = async (req, res) => {
   try {
     const mobileFromRequest = getPhoneFromRequest(req.body);
@@ -523,7 +477,6 @@ module.exports = {
   sendOtp,
   verifyOtp,
   resendOtp,
-  firebaseExchange,
   setPin,
   login,
   refresh,

@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
-import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { router } from 'expo-router';
+import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
 import Toast from 'react-native-toast-message';
 import AppButton from '../../components/AppButton';
 import AppCard from '../../components/ui/AppCard';
@@ -14,6 +14,7 @@ import { spacing } from '../../theme/spacing';
 import { typography } from '../../theme/typography';
 
 export default function MobileAuthScreen() {
+  const router = useRouter();
   const { updateStoredMobile } = useContext(AuthContext);
   const [phone, setPhone] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,6 +60,13 @@ export default function MobileAuthScreen() {
             />
 
             <AppButton title="Send OTP" onPress={handleContinue} loading={isSubmitting} />
+
+            <View style={styles.loginPrompt}>
+              <Text style={styles.loginPromptText}>Already registered? </Text>
+              <Pressable onPress={() => router.push('/login')} hitSlop={8}>
+                <Text style={styles.loginPromptLink}>Login with PIN</Text>
+              </Pressable>
+            </View>
           </AppCard>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -94,5 +102,24 @@ const styles = StyleSheet.create({
     ...typography.body,
     color: colors.textSecondary,
     marginBottom: spacing.lg,
+  },
+  loginPrompt: {
+    marginTop: spacing.md,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  },
+  loginPromptText: {
+    ...typography.caption,
+    fontSize: 13,
+    color: colors.textSecondary,
+    textAlign: 'center',
+  },
+  loginPromptLink: {
+    ...typography.caption,
+    fontSize: 13,
+    color: colors.primary,
+    textAlign: 'center',
   },
 });

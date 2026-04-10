@@ -10,7 +10,6 @@
     "newArchEnabled": true,
     "android": {
       "package": "com.ratansoni.amanat",
-      "usesCleartextTraffic": false,
       "permissions": [
         "INTERNET"
       ]
@@ -24,7 +23,8 @@
           "color": "#2456B6",
           "defaultChannel": "default"
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "extra": {
       "router": {},

@@ -3,7 +3,6 @@ import Toast from 'react-native-toast-message';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ScreenWrapper from '../components/ui/ScreenWrapper';
 import { toastConfig } from '../components/ui/toastConfig';
-import '../src/config/firebase';
 import { AuthProvider } from '../context/AuthContext';
 import { EmergencyProvider } from '../context/EmergencyContext';
 import { FileProvider } from '../context/FileContext';

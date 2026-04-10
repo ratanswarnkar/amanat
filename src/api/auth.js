@@ -23,11 +23,6 @@ export const loginWithPassword = async ({ phone, password }) => {
   return data;
 };
 
-export const firebaseExchange = async ({ idToken, mobile }) => {
-  const { data } = await api.post('/auth/firebase-exchange', { idToken, mobile });
-  return data;
-};
-
 export const setPin = async ({ mobile, pin, otp_verified_token }) => {
   const { data } = await api.post('/auth/set-pin', { mobile, pin, otp_verified_token });
   return data;

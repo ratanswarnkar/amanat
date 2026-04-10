@@ -1,9 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { signOut } from "firebase/auth";
 import { createContext, useCallback, useEffect, useState } from "react";
 import { logoutSession } from "../src/api/auth";
 import { setAuthFailureHandler } from "../src/api/client";
-import { auth } from "../src/config/firebase";
 import {
   clearAuthSecrets,
   getRefreshToken as readRefreshToken,
@@ -287,7 +285,6 @@ export function AuthProvider({ children }) {
       if (storedRefreshToken) {
         await logoutSession(storedRefreshToken).catch(() => null);
       }
-      await signOut(auth);
     } catch (_error) {
       // ignore; still clear local session
     }
