@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+console.log("🔥 app.js loaded");
+console.log("🔥 authRoutes loaded");
 require('dotenv').config();
 
 const isBackgroundJobsEnabled = String(process.env.DISABLE_BACKGROUND_JOBS || '').toLowerCase() !== 'true';
@@ -120,11 +122,11 @@ app.use('/api/medicines', medicineRoutes);
 app.use('/api/medicines', medicineLogRoutes);
 app.use('/api/prescriptions', prescriptionRoutes);
 app.use('/api/schedules', scheduleRoutes);
-app.use('/api', reminderRoutes);
-app.use('/', reminderRoutes);
 app.use('/api/vitals', vitalRoutes);
 app.use('/api/voice', voiceRoutes);
 app.use('/api/vault', vaultFileRoutes);
+app.use('/api', reminderRoutes);
+app.use('/', reminderRoutes);
 app.use(errorHandler);
 
 module.exports = app;
